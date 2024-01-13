@@ -9,7 +9,7 @@ class SetMatrixZeroes {
         int[][] matrix = { { 0, 1, 2, 0 }, { 3, 4, 0, 2 }, { 1, 3, 1, 5 } };
         System.out.println(Arrays.toString(setZeroes2(matrix)));
     }
-
+//optimal solution 
     public static int[][] setZeroes2(int[][] matrix) {
         ArrayList<Integer> i=new ArrayList<>();
         ArrayList<Integer> j=new ArrayList<>();
@@ -28,6 +28,7 @@ class SetMatrixZeroes {
 
             return matrix;
     }
+    //Brute force 
     public static int[][] setZeroes(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
