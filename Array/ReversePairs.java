@@ -7,7 +7,7 @@ public class ReversePairs {
         System.out.println(reversePairs2(nums));
         // long originalValue = 2147483647L; // Note the 'L' suffix to indicate a long
         // literal
-        // long result = originalValue * 2;
+        // long result = originalValue * 2; 
         // System.out.println(result);
     }
 

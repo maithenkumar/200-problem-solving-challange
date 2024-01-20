@@ -8,7 +8,25 @@ public class Nmeetingsinoneroom {
         int end[] = { 2, 4, 6, 7, 9, 9 };
         System.out.println(maxMeetings(start, end, N));
     }
-
+ public static int maxMeetings2(int start[], int end[], int n)
+    {
+        SortedMap<Integer, Integer> sortedMap = new TreeMap<>();
+        for(int i=0;i<n;i++){
+            if(sortedMap.get(end[i]) == null){
+                sortedMap.put(end[i],start[i]);
+            } else{
+                sortedMap.put(end[i],Math.max(sortedMap.get(end[i]),start[i]));
+            }
+        }
+         int count = 0 , prevEnd = -1;
+         for (Map.Entry<Integer, Integer> entry : sortedMap.entrySet()) {
+             if(prevEnd < entry.getValue()){
+                 count++;
+                 prevEnd = entry.getKey();
+             }
+         }
+         return count;
+  }
     public static int maxMeetings(int start[], int end[], int n) {
         int meet = 0;
         for (int i = 0; i < n; i++) {
