@@ -1,6 +1,12 @@
-package Greedy_Algorithm;
+
+// package Greedy_Algorithm;
 
 // https://www.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
+
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 public class Nmeetingsinoneroom {
     public static void main(String[] args) {
         int N = 6;
